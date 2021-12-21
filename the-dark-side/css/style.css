@@ -1,0 +1,305 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --main-color : #33d7ff;
+    --background-color:#232323;
+    --text-color:#7e7e7e;
+    --border-color: #3f3f3f;
+}
+h2,h3{color: var(--main-color);}
+body{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* satrt main  */
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+/* main .search{width: 300px;} */
+main .search input{
+    background-color: var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    color: var(--main-color);
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 3px 10px;
+}
+/* end main  */
+/* start header  */
+header{
+    text-align: center;
+    padding: 40px;
+    font-size: 60px;
+    color: white;
+}
+header span{color: var(--main-color);}
+/* end header  */
+/* start nav */
+nav{
+    background-color: var(--background-color) !important;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+.active{color: var(--main-color) !important ;}
+.navbar-nav{
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 20px;
+}
+/* end nav */
+/* start section carousel */
+.carousel-section{
+    margin: 100px 40px;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+}
+.carousel-caption{
+    background-color: rgba(35, 35, 35, 0.7);
+    padding: 20px;
+}
+/* end section carousel */
+/* start section my work */
+.my-work{padding: 20px;}
+.my-work .container .row {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--text-color);
+    line-height: 25px;
+}
+.my-work .container .row:first-child h2{color: var(--main-color);}
+.my-work-img{
+    width: 300px;
+    background-size: cover;
+    margin-top: 20px;
+}
+.my-work-img img {
+    width: 225px;
+    height: 180px;
+    padding: 5px;
+    border: 2px solid var(--border-color);
+}
+/* end section my work */
+/* start footer */
+footer{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-top: 10px solid var(--border-color);
+    padding: 20px;
+}
+footer ul{
+    padding: 0px;
+}
+footer li{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+footer a:hover{
+    color: var(--main-color);
+}
+a i{
+    font-size: 10px;
+}
+.Contact-us{
+    border-left: 2px solid var(--border-color);
+}
+.Contact-us ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.Contact-us ul li{
+    background-color: var(--header-color);
+    border-radius: 50%;
+}
+.Contact-us ul li i{
+    font-size: 20px;
+    padding: 5px;
+}
+.Contact-us input{
+    background-color: var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    color: var(--main-color);
+    border: none;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 5px;
+}
+footer p{
+    margin-top:20px;
+    padding: 20px;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+}
+/* end footer */
+/* ----------------------------Start pricing page----------------------------------------- */
+.pricing{
+    color: var(--text-color);
+    padding: 60px;
+}
+.pricing-card{
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    position: relative;
+}
+.pricing-card::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 20px solid ;
+    border-color: var(--main-color)  var(--main-color) transparent transparent;
+    color: var(--main-color);
+    box-shadow: 0px 0px 50px;
+}
+.pricing li { 
+    list-style: none;
+    font-size: 20px;
+}
+.pricing li ul {   
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 2px solid var(--main-color);
+}
+.pricing li strong{
+    padding: 10px;
+    color: var(--main-color);
+    font-size: 25px;
+}
+.pricing ul { padding: 0px;}
+.pricing input{
+    background-color: var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    color: var(--main-color);
+    border: none;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 5px;
+}
+.pricing .row{
+    justify-content: space-around;
+}
+/* ----------------------------end pricing page----------------------------------------- */
+/* ----------------------------Start Gallry page----------------------------------------- */
+.gallary{
+    margin: 20px 0px;
+}
+#my-work{
+    justify-content: center;
+}
+#my-work div{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    border: 2px solid var(--border-color);
+    position: relative;
+}
+#my-work div::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0px;
+    opacity: 0.7;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+#my-work div:hover::after{
+    content: "view";
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.view{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: 0.3s;
+    border: 2px solid var(--border-color);
+    margin-bottom: 20px;
+}
+.view::after{
+        content: "Click on the image to view it here";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        
+    }
+@media (max-width : 1100px) {
+    #my-work div:hover::after,.view{
+        display: none;
+    }
+    
+}
+
+
+/* ----------------------------end Gallry page----------------------------------------- */
+/* ----------------------------start  contact page----------------------------------------- */
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+.contact input, .contact textarea{
+    background-color: var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    color: var(--main-color);
+    border: none;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 5px;
+}
+.form-control:focus {
+    color: var(--main-color);
+    background-color: var(--border-color);
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px;
+}
+/* ----------------------------end contact page----------------------------------------- */
+/* ----------------------------start about page----------------------------------------- */
+.about{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    padding: 50px 0px;
+}
+.about h1{
+    color: var(--main-color);
+}
+/* ----------------------------end about page----------------------------------------- */
